@@ -17,23 +17,14 @@ import {useState,useEffect} from "react"
 
 
 function Header(){
-    let [display, setDisplay] = useState(false) ;
+    let [display, setDisplay] = useState(true) ;
 
    
-    let nameClass = "hamburgerDiv"
+   
      let burgerClick = ()=>{
 
-        if(display){
-            nameClass = "displayOn"
-        }else{
-            nameClass = "hamburgerDiv"
-        }
-        console.log(nameClass);
         setDisplay(!display)
 
-
-       
-        
     }
 
 
@@ -73,15 +64,15 @@ function Header(){
             <img src={one} alt="" className="one" />
         </div>
         
-        <div className={`hamburgerDiv` } >
+        <div className={`${display?"displayOff":"hamburgerDiv"}` } >
                 <div>
                     <ul>
                     <li><a href="#"></a>FAQ</li>
-                    <li><a href="#"></a>MEnu</li>
-                    <li><a href="#"></a>MEnu</li>
-                    <li><a href="#"></a>MEnu</li>
-                    <li><a href="#"></a>MEnu</li>
-                    <li><a href="#"></a>MEnu</li>
+                    <li><a href="#"></a>Оплата и доставка</li>
+                    <li><a href="#"></a>Возврат</li>
+                    <li><a href="#"></a>Исследования</li>
+                    <li><a href="#"></a>Личный</li>
+                    <li><a href="#"></a>88(800)600-09-90</li>
                 </ul>
                 </div>
             </div>
